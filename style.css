@@ -1,0 +1,13 @@
+#map,
+#map2 {
+    height: 600px;
+    width: 600px;
+}
+
+#filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
