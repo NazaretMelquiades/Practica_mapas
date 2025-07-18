@@ -1,4 +1,3 @@
-/* ==== VARIABLES GLOBALES ==== */
 :root {
     --color-bg: #f4f4f4;
     --color-primary: #2c3e50;
@@ -8,7 +7,6 @@
     --color-shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* ==== RESET ==== */
 * {
     margin: 0;
     padding: 0;
@@ -115,7 +113,7 @@ footer {
 }
 
 /* ==== RESPONSIVE ==== */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     form {
         flex-direction: column;
         align-items: stretch;
@@ -124,5 +122,31 @@ footer {
     #map,
     #map2 {
         height: 300px;
+    }
+} */
+
+@media (max-width: 768px) {
+
+    #map,
+    section {
+        width: 95%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #map {
+        height: 300px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    form select,
+    form input[type="date"],
+    form button {
+        font-size: 0.9rem;
     }
 }

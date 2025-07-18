@@ -121,8 +121,8 @@ form.addEventListener("submit", async (event) => {
     const url = `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=${startDate}&endtime=${endDate}&minmagnitude=${minMag}`;
 
     // Mostrar en consola para depuración
-    console.log("URL generada:", url);
-    window.lastUrl = url; // para usar en consola si quieres
+    // console.log("URL generada:", url);
+    // window.lastUrl = url; // para usar en consola si quieres
 
     try {
         const res = await fetch(url);
