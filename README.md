@@ -14,11 +14,8 @@ Los objetivos principales son la maquetación de cada pantalla con HTML5 y CSS3,
 - Utilizar la asincronía
 
 ## 📸 Capturas de pantalla
-
-
-
-
-
+![Mapa 1](assets/MAPA%201.jpg)
+![Mapa 2](assets/MAPA%202.jpg)
 ## 🚀 Cómo ejecutar el proyecto
 
 1. Clonar repositorio de GitHub
@@ -49,4 +46,4 @@ index.html - archivo principal
 README.md - documentación
 
 ## 🧑‍💻 Autores
-- María de Nazaret Melquiades
+- María de Nazaret Melquiades Montero

@@ -99,22 +99,40 @@ getData().then(data => {
 // FORMULARIO DE FILTRO (mapa2)
 const form = document.getElementById("filters");
 
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+form.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
     const minMag = document.getElementById("minMag").value;
     const startDate = document.getElementById("startDate").value;
     const endDate = document.getElementById("endDate").value;
 
+    // Validación de campos vacíos
+    if (!minMag || !startDate || !endDate) {
+        alert("Por favor, completa todos los campos del formulario.");
+        return;
+    }
+
+    // Validación de rango de fechas
+    if (new Date(startDate) > new Date(endDate)) {
+        alert("La fecha de inicio no puede ser mayor que la fecha de fin.");
+        return;
+    }
+
     const url = `https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=${startDate}&endtime=${endDate}&minmagnitude=${minMag}`;
+
+    // Mostrar en consola para depuración
+    console.log("URL generada:", url);
+    window.lastUrl = url; // para usar en consola si quieres
 
     try {
         const res = await fetch(url);
         const data = await res.json();
+
         console.log("Filtrados:", data.features);
         showEarthquakes(data.features);
     } catch (err) {
         console.error("Error al cargar datos filtrados:", err);
+        alert("Hubo un error al cargar los datos. Inténtalo más tarde.");
     }
 });
 
